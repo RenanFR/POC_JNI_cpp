@@ -1,5 +1,5 @@
-g++ -c -fPIC -IC:/Dev/Java/jdk17.0.6_10/include -IC:/Dev/Java/jdk17.0.6_10/include/win32 native.cpp -o native.o
+javac -h . FootballChant.java
 
-g++ -shared -o native.dll native.o
+g++ -c -fPIC -IC:/Dev/Java/jdk17.0.6_10/include -IC:/Dev/Java/jdk17.0.6_10/include/win32 chants_provider.cpp -o chants_provider.o
 
-javac -h . Native.java
+g++ -shared -o chants_provider.dll chants_provider.o
